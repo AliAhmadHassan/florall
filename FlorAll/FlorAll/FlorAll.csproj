@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1EFA98D3-57BE-4B0A-8B36-C24FE5372B88}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlorAll</RootNamespace>
+    <AssemblyName>FlorAll</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\ServiceCountrie.cs" />
+    <Compile Include="ClientHTTP\DataServices.cs" />
+    <Compile Include="ClientHTTP\HttpClientExtensions.cs" />
+    <Compile Include="Model\activities.cs" />
+    <Compile Include="Model\activities_types.cs" />
+    <Compile Include="Model\adverts.cs" />
+    <Compile Include="Model\categories.cs" />
+    <Compile Include="Model\cities.cs" />
+    <Compile Include="Model\Class1.cs" />
+    <Compile Include="Model\Class2.cs" />
+    <Compile Include="Model\colors.cs" />
+    <Compile Include="Model\comments_feeds.cs" />
+    <Compile Include="Model\comments_shares.cs" />
+    <Compile Include="Model\common.cs" />
+    <Compile Include="Model\complaints.cs" />
+    <Compile Include="Model\contacts.cs" />
+    <Compile Include="Model\countries.cs" />
+    <Compile Include="Model\feeds.cs" />
+    <Compile Include="Model\feeds_base.cs" />
+    <Compile Include="Model\feeds_four_days.cs" />
+    <Compile Include="Model\feeds_three_days.cs" />
+    <Compile Include="Model\feeds_today.cs" />
+    <Compile Include="Model\feeds_two_days.cs" />
+    <Compile Include="Model\feeds_yesterday.cs" />
+    <Compile Include="Model\flowers.cs" />
+    <Compile Include="Model\follows.cs" />
+    <Compile Include="Model\history_movies.cs" />
+    <Compile Include="Model\informations.cs" />
+    <Compile Include="Model\information_types.cs" />
+    <Compile Include="Model\invites.cs" />
+    <Compile Include="Model\landpage_contacts.cs" />
+    <Compile Include="Model\likes_feeds.cs" />
+    <Compile Include="Model\likes_panels.cs" />
+    <Compile Include="Model\likes_shares.cs" />
+    <Compile Include="Model\pages.cs" />
+    <Compile Include="Model\panels.cs" />
+    <Compile Include="Model\panel_photos.cs" />
+    <Compile Include="Model\panel_topics.cs" />
+    <Compile Include="Model\publicities.cs" />
+    <Compile Include="Model\publicities_adverts.cs" />
+    <Compile Include="Model\publicities_feeds.cs" />
+    <Compile Include="Model\publicities_shares.cs" />
+    <Compile Include="Model\publicities_stories.cs" />
+    <Compile Include="Model\shares.cs" />
+    <Compile Include="Model\shares_cities.cs" />
+    <Compile Include="Model\shares_photos.cs" />
+    <Compile Include="Model\silences.cs" />
+    <Compile Include="Model\states.cs" />
+    <Compile Include="Model\sub_categories.cs" />
+    <Compile Include="Model\users.cs" />
+    <Compile Include="Model\users_origem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MyEntry.cs" />
+    <Compile Include="MyPicker.cs" />
+    <Compile Include="ViewModels\CreateUser.cs" />
+    <Compile Include="ViewModels\Feed.cs" />
+    <Compile Include="ViewModels\Login.cs" />
+    <Compile Include="ViewModels\NotifyBase.cs" />
+    <Compile Include="ViewModels\SelectLogin.cs" />
+    <Compile Include="ViewModels\Services\IMessageService.cs" />
+    <Compile Include="ViewModels\Services\INavigationService.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\Welcome.cs" />
+    <Compile Include="ViewModels\WelcomeText.cs" />
+    <Compile Include="Views\CreatePanel.xaml.cs">
+      <DependentUpon>CreatePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateUser.xaml.cs">
+      <DependentUpon>CreateUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FacebookLogin.xaml.cs">
+      <DependentUpon>FacebookLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Feeds.xaml.cs">
+      <DependentUpon>Feeds.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProfileEdit.xaml.cs">
+      <DependentUpon>ProfileEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectCategory.xaml.cs">
+      <DependentUpon>SelectCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectLogin.xaml.cs">
+      <DependentUpon>SelectLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectSubCategory.xaml.cs">
+      <DependentUpon>SelectSubCategory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Services\MessageService.cs" />
+    <Compile Include="Views\Services\NavigationService.cs" />
+    <Compile Include="Views\ShareFlower.xaml.cs">
+      <DependentUpon>ShareFlower.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShareFlowerColor.xaml.cs">
+      <DependentUpon>ShareFlowerColor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WelcomeText.xaml.cs">
+      <DependentUpon>WelcomeText.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ModernHttpClient, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.5.239-pre3\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Pages, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Pages.2.3.5.239-pre3\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10\Xamarin.Forms.Pages.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.5.239-pre3\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Theme.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Theme.Base.1.0.0.43-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Theme.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Theme.Dark, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Theme.Dark.1.0.0.43-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Theme.Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Theme.Light, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Theme.Light.1.0.0.43-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Theme.Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.5.239-pre3\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CreateUser.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FacebookLogin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SelectCategory.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SelectLogin.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Welcome.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\WelcomeText.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Feeds.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SelectSubCategory.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ShareFlower.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ShareFlowerColor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Search.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Profile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ProfileEdit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CreatePanel.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.5.239-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.5.239-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.5.239-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.5.239-pre3\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlorAll.Views.SelectLogin" BackgroundColor="#008691">
+
+    <ContentPage.Content>
+
+        <StackLayout HorizontalOptions="Center" VerticalOptions="EndAndExpand" Padding="10">
+            <Image Source="logo_white_100_with_name.png" 
+                   AutomationId="img" Aspect ="AspectFit" VerticalOptions="Start" WidthRequest="150" HeightRequest="150"/>
+
+            <StackLayout HeightRequest="50">
+
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Compartilhando Sonhos"
+                   TextColor="White"
+                   FontSize="30"
+                   HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout HeightRequest="10">
+
+            </StackLayout>
+
+
+            <Button Text="Conectar com Facebook"  Command="{Binding FacebookUserCommand}" VerticalOptions="End" BackgroundColor="#014E72" TextColor="#ffffff" WidthRequest="230"></Button>
+            <Button Text="Entrar" Command="{Binding LoginCommand}"  VerticalOptions="End" BackgroundColor="#014E72" TextColor="#ffffff" WidthRequest="230"></Button>
+            <Button Text="Cadastrar" Command="{Binding CreateUserCommand}" VerticalOptions="End" BackgroundColor="#014E72" TextColor="#ffffff" WidthRequest="230"></Button>
+            <Label Text="Esqueceu sua senha?" TextColor="#ffffff" FontAttributes="Bold" WidthRequest="230" Margin="10" HorizontalTextAlignment="Center" FontSize="Large"></Label>
+            <ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

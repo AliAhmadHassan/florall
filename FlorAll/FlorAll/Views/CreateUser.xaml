@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlorAll.Views.CreateUser" BackgroundColor="#008691" >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Padding="0">
+                <StackLayout HeightRequest="20"></StackLayout>
+                <Label Text="Cadastrar" TextColor="White" FontSize="30" HorizontalTextAlignment="Center"></Label>
+                <Label Text="Passo 1" TextColor="White" FontSize="20" HorizontalTextAlignment="Center"></Label>
+                <StackLayout HorizontalOptions="Center">
+                    <Image HorizontalOptions="Center" HeightRequest="150" BackgroundColor="White" WidthRequest="150" StyleClass="Circle"/>
+                </StackLayout>
+                <StackLayout x:Name="layout_form" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" Padding="20" Orientation="Vertical">
+
+                </StackLayout>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal" Padding="20">
+                    <Label Text="Li e aceito os termos de uso e políticas de privacidade" HorizontalOptions="Center" TextColor="White"/>
+                    <Switch HorizontalOptions="Center"></Switch>
+                </StackLayout>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Fill" Padding="20">
+                    <Button Text="Seguir" Command="{Binding CreateUserCommand}" VerticalOptions="End" BackgroundColor="#014E72" TextColor="#ffffff"></Button>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

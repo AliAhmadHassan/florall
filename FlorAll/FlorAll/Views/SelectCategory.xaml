@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlorAll.Views.SelectCategory"  BackgroundColor="White">
+
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <AbsoluteLayout>
+                    <Image Source="toolbox.png"></Image>
+                    <Image BackgroundColor="White" 
+                           WidthRequest="90" 
+                           HeightRequest="90" 
+                           StyleClass="Circle" 
+                           AbsoluteLayout.LayoutBounds=".01,.2,50,30" 
+                           AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                    <Image Source="icoConfig40.png"  
+                           AbsoluteLayout.LayoutBounds="1,.1, 50, 40"
+                            AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+                </AbsoluteLayout>
+
+                <Label Text="O que você deseja compartilhar?" TextColor="#008691" HorizontalTextAlignment="Center" FontSize="25"></Label>
+                <StackLayout HeightRequest="10">
+                    <ListView>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ImageCell Text="Decoração" Detail="compartilha uma decoração" ImageSource="icoDeco22.png">
+
+                                </ImageCell>
+
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
